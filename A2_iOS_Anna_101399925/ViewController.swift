@@ -30,8 +30,13 @@ class ViewController: UIViewController {
         fetchProducts()
         updateView()
         
-        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe(_:)))
-        view.addGestureRecognizer(swipe)
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe(_:)))
+        swipeLeft.direction = .left
+        view.addGestureRecognizer(swipeLeft)
+
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe(_:)))
+        swipeRight.direction = .right
+        view.addGestureRecognizer(swipeRight)
     }
     
     func fetchProducts() {
@@ -56,9 +61,16 @@ class ViewController: UIViewController {
     }
     
     @objc func doSwipe(_ gesture: UISwipeGestureRecognizer) {
-        if currentIndex < products.count - 1 {
-            currentIndex += 1
-            updateView()
+        if gesture.direction == .left {
+            if currentIndex < products.count - 1 {
+                currentIndex += 1
+                updateView()
+            }
+        } else if gesture.direction == .right {
+            if currentIndex > 0 {
+                currentIndex -= 1
+                updateView()
+            }
         }
     }
 
