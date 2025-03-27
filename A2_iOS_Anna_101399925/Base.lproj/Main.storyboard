@@ -74,6 +74,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Ulk-ds-coJ" id="ifG-mU-h3F"/>
+                        <outlet property="nameLabel" destination="MiX-xc-8jb" id="QiT-lL-DkQ"/>
+                        <outlet property="nextButton" destination="Anc-lW-HlM" id="ak4-aF-fiL"/>
+                        <outlet property="prevButton" destination="9JG-Pv-sUT" id="OSR-u8-5fm"/>
+                        <outlet property="priceLabel" destination="jCf-KE-efo" id="05h-qr-cDq"/>
+                        <outlet property="providerLabel" destination="nt9-lq-bLL" id="xlW-6n-Yvc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
