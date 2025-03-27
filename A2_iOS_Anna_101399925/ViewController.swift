@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -16,11 +17,25 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    
+    var products: [Product] = []
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        fetchProducts()
         updateView()
+    }
+    
+    func fetchProducts() {
+        let request: NSFetchRequest<Product> = Product.fetchRequest()
+        do {
+            products = try context.fetch(request)
+        } catch {
+            print("Failed to fetch products: \(error)")
+        }
     }
 
     func updateView() {
