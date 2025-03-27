@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     var products: [Product] = []
+    var currentIndex = 0
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -39,7 +40,11 @@ class ViewController: UIViewController {
     }
 
     func updateView() {
-        nameLabel.text = "No Products"
+        let product = products[currentIndex]
+        nameLabel.text = product.name
+        descriptionLabel.text = product.desc
+        priceLabel.text = String(format: "$%.2f", product.price)
+        providerLabel.text = product.provider
     }
 
 }
