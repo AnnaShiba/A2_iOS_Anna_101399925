@@ -47,6 +47,9 @@ class ViewController: UIViewController {
         descriptionLabel.text = product.desc
         priceLabel.text = String(format: "$%.2f", product.price)
         providerLabel.text = product.provider
+        
+        prevButton.isEnabled = currentIndex > 0
+        nextButton.isEnabled = currentIndex < products.count - 1
     }
 
     @IBAction func prevTapped(_ sender: UIButton) {
