@@ -20,11 +20,14 @@
                                 <rect key="frame" x="5" y="70" width="400" height="726"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Sha-iA-JR0">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="141"/>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-DR-BI1">
+                                        <rect key="frame" x="0.33333333333334281" y="0.0" width="399.66666666666663" height="140.66666666666666"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qBH-A2-cnw"/>
+                                        </constraints>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="W14-rq-6Fe"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="bls-0q-P0q"/>
                                         </connections>
                                     </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Product Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" id="MiX-xc-8jb">
@@ -82,6 +85,9 @@
                                     </stackView>
                                 </subviews>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstItem="d8e-DR-BI1" firstAttribute="top" secondItem="M2i-G7-IH4" secondAttribute="top" id="toD-Il-cUc"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -95,7 +101,7 @@
                         <outlet property="prevButton" destination="9JG-Pv-sUT" id="OSR-u8-5fm"/>
                         <outlet property="priceLabel" destination="jCf-KE-efo" id="05h-qr-cDq"/>
                         <outlet property="providerLabel" destination="nt9-lq-bLL" id="xlW-6n-Yvc"/>
-                        <outlet property="searchBar" destination="Sha-iA-JR0" id="L37-uW-jjv"/>
+                        <outlet property="searchBar" destination="d8e-DR-BI1" id="a5f-JD-5Dy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
