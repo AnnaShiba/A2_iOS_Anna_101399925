@@ -62,11 +62,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Previous"/>
+                                        <connections>
+                                            <action selector="prevTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="1CA-wv-NWI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anc-lW-HlM">
                                         <rect key="frame" x="198.66666666666666" y="0.0" width="89.666666666666657" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                        <connections>
+                                            <action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="Bqo-SD-kSK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

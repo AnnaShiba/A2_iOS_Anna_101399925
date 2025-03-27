@@ -47,5 +47,18 @@ class ViewController: UIViewController {
         providerLabel.text = product.provider
     }
 
+    @IBAction func prevTapped(_ sender: UIButton) {
+        if currentIndex > 0 {
+            currentIndex -= 1
+            updateView()
+        }
+    }
+
+    @IBAction func nextTapped(_ sender: UIButton) {
+        if currentIndex < products.count - 1 {
+            currentIndex += 1
+            updateView()
+        }
+    }
 }
 
