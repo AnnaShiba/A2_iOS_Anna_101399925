@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         fetchProducts()
         updateView()
+        
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe(_:)))
+        view.addGestureRecognizer(swipe)
     }
     
     func fetchProducts() {
@@ -50,6 +53,13 @@ class ViewController: UIViewController {
         
         prevButton.isEnabled = currentIndex > 0
         nextButton.isEnabled = currentIndex < products.count - 1
+    }
+    
+    @objc func doSwipe(_ gesture: UISwipeGestureRecognizer) {
+        if currentIndex < products.count - 1 {
+            currentIndex += 1
+            updateView()
+        }
     }
 
     @IBAction func prevTapped(_ sender: UIButton) {
