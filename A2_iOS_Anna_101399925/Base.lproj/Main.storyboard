@@ -16,47 +16,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillProportionally" alignment="center" spacing="1" id="M2i-G7-IH4">
-                                <rect key="frame" x="5" y="117" width="400" height="651"/>
+                            <stackView opaque="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillProportionally" alignment="center" spacing="14" id="M2i-G7-IH4">
+                                <rect key="frame" x="5" y="70" width="400" height="726"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Sha-iA-JR0">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="141"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="W14-rq-6Fe"/>
+                                        </connections>
+                                    </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Product Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" id="MiX-xc-8jb">
-                                        <rect key="frame" x="114.00000000000001" y="0.0" width="172.33333333333337" height="142"/>
+                                        <rect key="frame" x="114.00000000000001" y="154.66666666666666" width="172.33333333333337" height="84.333333333333343"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5e-oP-Q3c">
-                                        <rect key="frame" x="192" y="143" width="16.333333333333343" height="85.666666666666686"/>
+                                        <rect key="frame" x="192" y="253" width="16.333333333333343" height="51"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulk-ds-coJ">
-                                        <rect key="frame" x="156.66666666666666" y="229.66666666666663" width="87.333333333333343" height="86"/>
+                                        <rect key="frame" x="156.66666666666666" y="318" width="87.333333333333343" height="51"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCf-KE-efo">
-                                        <rect key="frame" x="181" y="316.66666666666669" width="38.666666666666657" height="85.666666666666686"/>
+                                        <rect key="frame" x="181" y="383" width="38.666666666666657" height="51"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nt9-lq-bLL">
-                                        <rect key="frame" x="168.33333333333334" y="403.33333333333331" width="63.333333333333343" height="85.666666666666686"/>
+                                        <rect key="frame" x="168.33333333333334" y="448" width="63.333333333333343" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="cV7-fo-9fM">
-                                        <rect key="frame" x="56" y="490" width="288.33333333333331" height="161"/>
+                                        <rect key="frame" x="56" y="513" width="288.33333333333331" height="213"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JG-Pv-sUT">
-                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="161"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="213"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Previous"/>
                                                 <connections>
@@ -64,7 +71,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anc-lW-HlM">
-                                                <rect key="frame" x="198.66666666666666" y="0.0" width="89.666666666666657" height="161"/>
+                                                <rect key="frame" x="198.66666666666666" y="0.0" width="89.666666666666657" height="213"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                                 <connections>
@@ -88,9 +95,20 @@
                         <outlet property="prevButton" destination="9JG-Pv-sUT" id="OSR-u8-5fm"/>
                         <outlet property="priceLabel" destination="jCf-KE-efo" id="05h-qr-cDq"/>
                         <outlet property="providerLabel" destination="nt9-lq-bLL" id="xlW-6n-Yvc"/>
+                        <outlet property="searchBar" destination="Sha-iA-JR0" id="L37-uW-jjv"/>
+                        <outlet property="searchDisplayController" destination="wWR-hi-eAr" id="J3W-Lq-fIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="wWR-hi-eAr">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="3gh-U8-o8u"/>
+                        <outlet property="searchBar" destination="Sha-iA-JR0" id="dkf-Dm-3Jz"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="2dL-8P-gI7"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="scj-jr-qkv"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="kM3-8Y-2dt"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
         </scene>

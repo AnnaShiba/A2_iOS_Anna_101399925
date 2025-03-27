@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var products: [Product] = []
     var currentIndex = 0
