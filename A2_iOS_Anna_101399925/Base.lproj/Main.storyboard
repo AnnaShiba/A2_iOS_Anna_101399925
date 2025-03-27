@@ -96,19 +96,9 @@
                         <outlet property="priceLabel" destination="jCf-KE-efo" id="05h-qr-cDq"/>
                         <outlet property="providerLabel" destination="nt9-lq-bLL" id="xlW-6n-Yvc"/>
                         <outlet property="searchBar" destination="Sha-iA-JR0" id="L37-uW-jjv"/>
-                        <outlet property="searchDisplayController" destination="wWR-hi-eAr" id="J3W-Lq-fIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="wWR-hi-eAr">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="3gh-U8-o8u"/>
-                        <outlet property="searchBar" destination="Sha-iA-JR0" id="dkf-Dm-3Jz"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="2dL-8P-gI7"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="scj-jr-qkv"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="kM3-8Y-2dt"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
         </scene>

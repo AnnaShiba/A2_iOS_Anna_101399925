@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         fetchProducts()
         updateView()
+        
+        searchBar.delegate = self
         
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(doSwipe(_:)))
         swipeLeft.direction = .left
@@ -59,6 +61,30 @@ class ViewController: UIViewController {
         
         prevButton.isEnabled = currentIndex > 0
         nextButton.isEnabled = currentIndex < products.count - 1
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            fetchProducts()
+        } else {
+            filterProducts(keyword: searchText)
+        }
+        currentIndex = 0
+        updateView()
+    }
+    
+    func filterProducts(keyword: String) {
+        let request: NSFetchRequest<Product> = Product.fetchRequest()
+        request.predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [
+            NSPredicate(format: "name CONTAINS[cd] %@", keyword),
+            NSPredicate(format: "desc CONTAINS[cd] %@", keyword)
+        ])
+        
+        do {
+            products = try context.fetch(request)
+        } catch {
+            print("Failed to search products: \(error)")
+        }
     }
     
     @objc func doSwipe(_ gesture: UISwipeGestureRecognizer) {
