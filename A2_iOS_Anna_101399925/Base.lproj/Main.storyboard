@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-DR-BI1">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="141"/>
+                                        <rect key="frame" x="0.33333333333334281" y="0.0" width="399.66666666666663" height="140.66666666666666"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qBH-A2-cnw"/>
                                         </constraints>
@@ -116,16 +116,16 @@
             </objects>
             <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Product View Controller-->
         <scene sceneID="oKw-HT-rOG">
             <objects>
-                <viewController id="IHs-TN-IEY" sceneMemberID="viewController">
+                <viewController id="IHs-TN-IEY" customClass="AddProductViewController" customModule="A2_iOS_Anna_101399925" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2aM-xa-zBu">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="center" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="p2p-x7-HcX">
-                                <rect key="frame" x="144" y="75" width="102" height="246.33333333333334"/>
+                                <rect key="frame" x="144" y="75.000000000000028" width="102" height="299.66666666666669"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K4A-hs-geA">
                                         <rect key="frame" x="18" y="0.0" width="66" height="34"/>
@@ -151,6 +151,17 @@
                                         <rect key="frame" x="20.666666666666671" y="212" width="61" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                        <connections>
+                                            <action selector="addProduct:" destination="IHs-TN-IEY" eventType="touchDown" id="IGY-C7-3s1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXH-dG-hPi">
+                                        <rect key="frame" x="12.666666666666664" y="265.33333333333331" width="76.666666666666686" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelView:" destination="IHs-TN-IEY" eventType="touchDown" id="BdV-2l-IKZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -158,6 +169,12 @@
                         <viewLayoutGuide key="safeArea" id="7AL-jn-4ac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="descField" destination="Lt7-1N-X1p" id="1ea-PF-V67"/>
+                        <outlet property="nameField" destination="K4A-hs-geA" id="X2J-yM-QDd"/>
+                        <outlet property="priceField" destination="SEx-Jc-Hai" id="pBL-kf-Bpl"/>
+                        <outlet property="providerField" destination="wJb-Uo-4hV" id="uDy-l4-qi3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftG-DI-dnE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
