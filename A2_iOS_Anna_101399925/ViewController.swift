@@ -11,6 +11,7 @@ import CoreData
 class ViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var providerLabel: UILabel!
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
     func updateView() {
         let product = products[currentIndex]
         nameLabel.text = product.name
+        idLabel.text = product.id?.uuidString
         descriptionLabel.text = product.desc
         priceLabel.text = String(format: "$%.2f", product.price)
         providerLabel.text = product.provider

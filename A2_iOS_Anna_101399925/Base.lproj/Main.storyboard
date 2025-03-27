@@ -21,60 +21,60 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Product Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" id="MiX-xc-8jb">
-                                        <rect key="frame" x="114.00000000000001" y="0.0" width="172.33333333333337" height="184.33333333333334"/>
+                                        <rect key="frame" x="114.00000000000001" y="0.0" width="172.33333333333337" height="142"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5e-oP-Q3c">
-                                        <rect key="frame" x="192" y="185.33333333333334" width="16.333333333333343" height="111.33333333333334"/>
+                                        <rect key="frame" x="192" y="143" width="16.333333333333343" height="85.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulk-ds-coJ">
-                                        <rect key="frame" x="156.66666666666666" y="297.66666666666669" width="87.333333333333343" height="111"/>
+                                        <rect key="frame" x="156.66666666666666" y="229.66666666666663" width="87.333333333333343" height="86"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCf-KE-efo">
-                                        <rect key="frame" x="181" y="409.66666666666669" width="38.666666666666657" height="111.33333333333331"/>
+                                        <rect key="frame" x="181" y="316.66666666666669" width="38.666666666666657" height="85.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nt9-lq-bLL">
-                                        <rect key="frame" x="168.33333333333334" y="522" width="63.333333333333343" height="129"/>
+                                        <rect key="frame" x="168.33333333333334" y="403.33333333333331" width="63.333333333333343" height="85.666666666666686"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="cV7-fo-9fM">
+                                        <rect key="frame" x="56" y="490" width="288.33333333333331" height="161"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JG-Pv-sUT">
+                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="161"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Previous"/>
+                                                <connections>
+                                                    <action selector="prevTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="1CA-wv-NWI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anc-lW-HlM">
+                                                <rect key="frame" x="198.66666666666666" y="0.0" width="89.666666666666657" height="161"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                                <connections>
+                                                    <action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="Bqo-SD-kSK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="cV7-fo-9fM">
-                                <rect key="frame" x="61" y="783" width="288.33333333333331" height="34.333333333333336"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JG-Pv-sUT">
-                                        <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Previous"/>
-                                        <connections>
-                                            <action selector="prevTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="1CA-wv-NWI"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anc-lW-HlM">
-                                        <rect key="frame" x="198.66666666666666" y="0.0" width="89.666666666666657" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                        <connections>
-                                            <action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="Bqo-SD-kSK"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -82,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="Ulk-ds-coJ" id="ifG-mU-h3F"/>
+                        <outlet property="idLabel" destination="n5e-oP-Q3c" id="zvO-Q5-8Aq"/>
                         <outlet property="nameLabel" destination="MiX-xc-8jb" id="QiT-lL-DkQ"/>
                         <outlet property="nextButton" destination="Anc-lW-HlM" id="ak4-aF-fiL"/>
                         <outlet property="prevButton" destination="9JG-Pv-sUT" id="OSR-u8-5fm"/>
